@@ -1,0 +1,583 @@
+@keyframes fade {
+    from {opacity: .6}
+    to {opacity: 1.7}
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto Slab", sans-serif;
+    box-sizing: border-box;
+}
+:root{
+    --navbtn: #CD006B;
+    --btn-text-color: white;
+    --btn-tex: #3396C0;
+    --bckg: #E6F4FB;
+    --bn: #EEE325;
+    --footer: ;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+button:hover{
+    cursor: pointer;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 50px;
+    align-items: center;
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: var(--btn-text-color);
+}
+header img{
+    width: 260px;
+    height: 70px;
+}
+header button{
+    border: none;
+    background-color: var(--navbtn);
+    padding: 16px 32px;
+    border-radius: 5px;
+    color: var(--btn-text-color);
+    font-size: 15px;
+}
+.Banner-section{
+    display: flex;
+    height: 95vh;
+    margin-bottom: 32px;
+    width: 100%;
+    /* margin: auto; */
+}
+.Banner-section .Banner{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: none;
+    transition: 1.4s ease;
+    
+    /* margin: auto; */
+
+}
+.Banner-section .Banner img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.numbertext{
+    color: red;
+    font-size: 18px;
+    padding: 8px 12px;
+    position: absolute;
+    font-weight: bold;
+    top: 26%;
+}
+.textdiv{
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    display: block;
+    line-height: 55px;
+    color: var(--btn-text-color);
+    text-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px;
+}
+.textdiv h1{
+    font-weight: 900;
+    font-size: 50px;
+}
+.textdiv p{
+    font-weight: 400;
+    font-size: 30px;
+    margin-left: 64px;
+}
+.icons{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    padding: 0 16px;
+    top: 50%;
+}
+.icons .icondiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    height: 50px;
+    width: 40px;
+    cursor: pointer;
+    border: solid 1px var(--btn-text-color);
+    
+}
+.icons .icondiv i{
+    color: var(--btn-text-color);
+    font-size: 30px;
+}
+.dot{
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+
+}
+.active, .dot:hover{
+    background-color: #717171;
+}
+/* Fading Animation======================================================= */
+.fade{
+    animation-name: fade;
+    animation-duration: 2s;
+}
+
+.whorw{
+    display: flex;
+    padding: 16px 50px;
+    gap: 100px;
+    margin-top: 35px;
+}
+.whorw .Notes h1{
+ font-size: 40px;
+ font-weight: 900;
+}
+.whorw .Notes{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.whorw .Notes .explain{
+    display: flex;
+    /* flex-direction: column; */
+    gap: 30px;
+}
+.explain p{
+    line-height: 30px;
+    font-size: 19px;
+}
+.explain img{
+    width: 30px;
+    height: 30px;
+}
+.whorw .rainbowimg img{
+    border-radius: 5px;
+}
+/* .whorw .Notes,
+.whorw .Notes .explain{
+    justify-content: space-between;
+    gap: 30px;
+} */
+.simple{
+    display: flex;
+    padding: 16px 50px;
+    gap: 100px;
+    /* justify-content: space-between; */
+    margin-top: 35px;
+    flex-direction: row;
+}
+.simple .simplimg img{
+    border-radius: 5px;
+   
+}
+.simple .simpletext{
+    flex-direction: column;
+    gap: 25px
+
+}
+.simple .simpletext h1{
+    font-size: 45px; 
+    font-weight: 900;
+
+}
+.simple .simpletext{
+    display: flex;
+    font-size: 21px;
+    line-height: 30px;
+    
+}
+
+.Question{
+    display: flex;
+    padding: 16px 50px;
+    gap: 30px;
+    /* justify-content: space-between; */
+    margin-top: 100px;
+    flex-direction: column;
+    background-color: var(--bn);
+    align-items: center;
+    height: 280px;
+
+}
+.Question h1{
+    /* gap: 30px; */
+    font-size: 42px;
+  font-weight: 900;
+}
+.Question button{
+    border: none;
+    background-color: var(--navbtn);
+    padding: 16px 32px;
+    border-radius: 5px;
+    color: var(--btn-text-color);
+    font-size: 15px;
+    gap: 25px;
+}
+.consultus{
+    display: flex;
+    flex-direction: column;
+    padding: 16px 50px;
+    margin-top: 100px;
+    align-items: center;
+    gap: 20px;
+    /* padding-top: 10px; */
+}
+.consultus h1{
+    display: flex;
+    font-size: 45px; 
+    font-weight: 900;
+   text-align: center;
+}
+.consultus .consultusite{
+    display: flex;
+    gap: 60px;
+    margin: 20px;
+}
+.consultusite .consultusite1{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;
+}
+.consultusite1 img{
+    width: 90px;
+    height: 130px;
+    /* padding-left: 20px; */
+    /* margin-left: 20px; */
+}
+.consultusite1 p{
+    line-height: 25px;
+    font-size: 20px;
+    align-items: center;
+}
+.consultusite1 .con{
+    display: flex;
+    font-size: 21px; 
+    font-weight: 900;
+}
+/* .consultusite1 img,
+.consultusite1 .con{
+    margin-left: 100px;
+} */
+.contact{
+    display: flex;
+    padding: 16px 50px;
+    margin-top: 20px;
+    background-color:var(--bckg);
+    gap: 54px;
+    padding-bottom: 60px;
+}
+.contact .contactheading{
+    font-size: 38px;
+    font-weight: 900;
+}
+.contact .contactxt{
+    display: flex;
+    padding: 16px;
+    margin-top: 45px;
+    flex-direction: column;
+    gap: 35px;
+   /* justify-content: space-between; */
+
+}
+.contactxt1{
+    display: flex;
+     gap: 9px;
+     /* justify-content: space-between; */
+}
+.contactxt1 h1{
+        width: 160px;
+}
+.contactxt1 img{
+    width: 30px;
+    height: 30px; 
+}
+.contactxt1 button{
+    border: none;
+    background-color: var(--btn-tex);
+    padding: 16px 32px;
+    border-radius: 5px;
+    color: var(--btn-text-color);
+    font-size: 15px;
+    gap: 25px;
+    margin: 7px;
+}
+.contactxt1 p{
+    margin: 7px;
+} 
+.contactxt1 p img{
+    width: 20px;
+    height: 20px;
+} 
+.contactxt2 img{
+    margin-top: 50px;
+    border-radius: 22px;
+}
+.footer{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(40, 54, 61);
+    padding: 60px 50px;
+    /* margin-top: 50px; */
+}
+.footer h2{
+    color: var(--btn-text-color); 
+    margin-bottom: 10px;
+    font-size: 20px;
+
+} 
+footer p{
+    line-height: 30px;
+}
+.footers{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.footers .p{
+    font-size: 17px;
+    font-weight: 20px;
+    /* color: var(--btn-text-color); */
+}
+.num p,
+.const p{
+    color: var(--btn-text-color);
+}
+.footers .d{
+    border: none;
+    background-color: var(--btn-tex);
+    padding: 16px 32px;
+    border-radius: 5px;
+    color: var(--btn-text-color);
+    font-size: 15px;
+    gap: 25px;
+    margin: 7px;
+    height: 50px;
+    /* margin-left: 50PX; */
+}
+.footers .b{
+    border: none;
+    background-color: var(--navbtn);
+    padding: 16px 32px;
+    border-radius: 5px;
+    color: var(--btn-text-color);
+    font-size: 15px;
+    gap: 25px;
+    margin: 7px;
+    height: 50px;
+}
+.footers .c img{
+    width: 290px;
+    height: 100px;
+    background-color: var(--bckg);
+    margin-left: 80px;
+}
+/* .c img{
+    margin-left: 80px;
+} */
+@media(max-width: 1204px){
+  .contact .contactxt1 h1{
+    width: 120px;
+  }
+}
+@media(max-width: 1212px){
+.simple .simpletext h1{
+    font-size: 40px;
+}
+}
+
+@media(max-width: 1175px){
+    .simple .simpletext h1{
+        font-size: 35px;
+    }
+    .whorw .Notes h1{
+        font-size: 37px;
+    }
+    }
+
+    @media(max-width: 1147px){
+        .contact{
+            flex-direction: column;
+        }
+        .contact .contactxt1 h1{
+            width: 45%;
+        }
+        .contactxt2 img{
+            width: 100%;
+        }
+        .footers .c img{
+            margin-left: 0;
+        }
+          }
+
+          @media(max-width: 1096px){
+            .footer{
+                align-items: center;
+            }
+            .footer p{
+                font-size: 20px;
+            }
+            .footers{
+                flex-direction: column;
+                width: 80%;
+                align-items: center;
+                gap: 30px;
+            }
+            .footer h2{
+                font-size: 42px;
+            }
+            .footers .c img{
+                width: 100%;
+            }
+          }
+
+    @media(max-width: 1064px){
+        .whorw{
+            flex-direction: column;
+        }
+        .whorw .rainbowimg img{
+            width: 100%;
+        }
+        .simple{
+            flex-direction: column-reverse;
+        }
+        .simple .simplimg img{
+         width: 100%;
+        }
+        .textdiv{
+            left: 22%;
+            
+        }
+    }
+
+    @media(max-width: 865px){
+        .textdiv h1{
+            font-size: 40px;
+            
+        }
+    }
+
+        @media(max-width: 810px){
+            .consultus .consultusite{
+                flex-direction: column;
+            }
+        }
+        @media(max-width: 747px){
+            .textdiv h1{
+                font-size: 37px;
+                
+            }
+        }
+        @media(max-width: 648px){
+            .textdiv{
+                left: 20%;
+            }
+        }
+        @media(max-width: 629px){
+            .textdiv h1{
+                font-size: 34px;
+                /* padding-right: 5px; */
+            }
+            .Question h1{
+                font-size: 25px;
+                font-weight: 50px;
+            }
+        }
+        @media(max-width: 588px){
+            .textdiv h1{
+                font-size: 34px;
+                /* padding-right: 5px; */
+            }
+            .textdiv p{
+                font-size: 25px;
+                /* padding-right: 5px; */
+            }
+        }
+        @media(max-width: 574px){
+            .textdiv{
+               left: 17%;
+            }
+        }
+        @media(max-width:531px){
+            .textdiv{
+                align-items: center;
+            }
+            .textdiv h1{
+                font-size: 30px;
+                /* padding-right: 5px; */
+            }
+            .textdiv p{
+                font-size: 20px;
+                /* padding-right: 5px; */
+            }
+            .textdiv {
+                left: 20%;
+            }
+        }
+        @media(max-width: 515px){
+            .consultus h1 {
+                font-size: 34px;
+            }
+            header img{
+                width: 140px;
+                height: 44px;
+             }  
+              
+        }
+        @media(max-width: 504px){
+            .textdiv h1{
+                font-size: 27px;
+                /* padding-right: 5px; */
+            }
+            .textdiv p{
+                font-size: 17px;
+                /* padding-right: 5px; */
+            }
+            .icons .icondiv i{
+                font-size: 23px;
+            }
+            .icons .icondiv{
+                height: 45px;
+                width: 35px;
+            }
+        }
+        @media(max-width: 456px){
+            .textdiv h1{
+                font-size: 24px;  
+            }
+            .textdiv p {
+                font-size: 15px;
+            }
+        }
+
+        @media(max-width: 398px){
+            .textdiv h1{
+                font-size: 20px;  
+            }
+            .textdiv p {
+                font-size: 12px;
+            }
+
+            .textdiv{
+                left: 18%;
+            }
+        }
+      
+    
